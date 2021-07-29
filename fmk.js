@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
 
     if (!message.mentions.users.first()) return message.channel.send(`<@${message.author.id}>, please mention a user you wanna choose!`).then(msg => {
-        msg.delete({ timeout: 3000 })  // Timeout to delete the message the value 3000 equals 3 seconds
+        msg.delete({ timeout: 3000 })  // Timeout to delete the message, the value 3000 equals 3 seconds
     });
   let postMsg = await message.channel.send('**Please Wait...**');  
 
